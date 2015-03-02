@@ -55,9 +55,68 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
         Button eliminar = (Button)findViewById(R.id.btnEliminar);
         n0.setOnClickListener(this);
     }
-    public void onClick(View v){
-        TextView pantalla = (TextView)findViewById(R.id.texto);
-        
+    public void onClick(View v) {
+        TextView pantalla = (TextView) findViewById(R.id.texto);
+        int seleccion = v.getId();
+
+        try {
+            switch (seleccion) {
+                case R.id.btn0:
+                    pantalla.setText("0");
+                    break;
+                case R.id.btn1:
+                    pantalla.setText("1");
+                    break;
+                case R.id.btn2:
+                    pantalla.setText("2");
+                    break;
+                case R.id.btn3:
+                    pantalla.setText("3");
+                    break;
+                case R.id.btn4:
+                    pantalla.setText("4");
+                    break;
+                case R.id.btn5:
+                    pantalla.setText("5");
+                    break;
+                case R.id.btn6:
+                    pantalla.setText("6");
+                    break;
+                case R.id.btn7:
+                    pantalla.setText("7");
+                    break;
+                case R.id.btn8:
+                    pantalla.setText("8");
+                    break;
+                case R.id.btn9:
+                    pantalla.setText("9");
+                    break;
+                case R.id.btnPunto:
+                    pantalla.setText(".");
+                    break;
+                case R.id.btnMas:
+                    pantalla.setText("");
+                    break;
+                case R.id.btnMenos:
+                    pantalla.setText("");
+                    break;
+                case R.id.btnPor:
+                    pantalla.setText("");
+                    break;
+                case R.id.btnDividir:
+                    pantalla.setText("");
+                    break;
+
+                case R.id.btnBorrar:
+                    pantalla.setText("");
+                    break;
+
+            }
+            catch(Exception e){
+                pantalla.setText("error");
+            }
+
+        }
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
